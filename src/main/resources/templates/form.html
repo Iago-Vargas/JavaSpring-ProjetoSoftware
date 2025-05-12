@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Romeo Viadinho</title>
+</head>
+<body>
+    <form th:action="@{/produto/salvar}" th:object="${produto}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Name: </label>
+        <input type="text" th:field="*{nome}" required="required"/> </br>
+
+        <label> Descrição: </label>
+        <input type="text" th:field="*{descricao}" required="required"/></br>
+
+        <label> Preço: </label>
+        <input type="number" th:field="*{preco}" required="required"/></br>
+
+        <label> Quantidade: </label>
+        <input type="number" th:field="*{quantidade}" required="required"/></br>
+
+        <label> Imagem: </label>
+        <input type="text" th:field="*{imagem}" required="required"/></br>
+
+        <button type="submit"><a href="/produto/listar" > Salvar</a></button>
+    </form>
+<a th:href="@{/}">Index</a>
+</body>
+</html>
