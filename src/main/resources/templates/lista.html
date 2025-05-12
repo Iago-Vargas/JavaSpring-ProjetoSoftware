@@ -23,7 +23,13 @@
             <td th:text="${p.quantidade}"></td>
             <td><img th:src="${p.imagem}" width="100"></td>
             <td>
-                <a th:href="@{/produto/editar/{id}(id=${p.id})}">Editar</a>
+                <a th:href="@{/produto/editar/{id}(id=${p.id})}">
+                    <img src="https://www.flaticon.com/br/icones-gratis/editar" alt="Alterar" width="20" height="20">
+                </a>
+                <a th:href="@{/produto/deletar/{id}(id=${p.id})}">
+                    <img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" alt="Deletar" width="20" height="20">
+                </a>
+
             </td>
         </tr>
     </table>
